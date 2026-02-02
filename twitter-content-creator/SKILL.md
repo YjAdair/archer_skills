@@ -24,16 +24,32 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
 | **推文串(Thread)** | 7–15条 (800–3000字) | 建立专业度、深度教育、高转发 | ★★★★☆ | 40–90 min |
 | **长文** | 3000+字 (Articles) | 深度信任、品牌建设 | ★★★☆☆ | 2–5 h |
 
-### Phase 2: 通用内容创作 SOP (Production)
+### Phase 2: 风格选择 (Style Selection)
+选择适合内容的写作风格：
+
+1.  **通用爆款风格 (Viral)**:
+    *   **特点**: 犀利、毒舌、情绪化、强反差。
+    *   **适用**: 观点吐槽、趋势评论、小白科普。
+    *   **Prompt**: 使用 `assets/prompt_template.md` 中的 "1. 通用爆款生成"。
+
+2.  **技术博主 2.0 风格 (Tech Influencer)**:
+    *   **特点**: 极致干货、高信息密度、结构化、中英混排、括号补充。
+    *   **核心**: "先结论，后证据" (Conclusion First) + 列表化表达。
+    *   **适用**: 工具评测、代码分享、Paper 解读、Prompt 技巧。
+    *   **Prompt**: 使用 `assets/prompt_template.md` 中的 "3. 技术博主 2.0 风格"。
+
+### Phase 3: 内容创作 SOP (Production)
 适用于短文和一般内容的 5 步流程：
 
 1.  **提炼钩子 (30s)**: 从资讯+看法中提炼最反常识/扎心的一句话。
 2.  **列子弹点 (1-2min)**: 拆解为3-5个独立点。
-3.  **AI扩写 (3-10min)**: 使用 `assets/prompt_template.md` 中的Prompt。
-4.  **人性化改写 (5-15min)**: 加入口语、自嘲、极化观点，控制节奏。
+3.  **AI扩写 (3-10min)**: 根据选择的风格，调用对应的 Prompt。
+4.  **人性化改写 (5-15min)**:
+    *   *通用风格*: 加入口语、自嘲、极化观点。
+    *   *技术风格*: 强化括号补充、检查专业术语英文、确保结论前置。
 5.  **检查优化 (2min)**: 检查钩子、截图金句和CTA。
 
-### Phase 2.1: 推文串 (Thread) 专属 SOP
+### Phase 3.1: 推文串 (Thread) 专属 SOP
 目标：从 Idea 到发布 < 90 分钟，爆款概率最大化。
 
 1.  **选题原则** (决定 80% 成败):
@@ -54,14 +70,14 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
     *   制造互动 ("你同意吗？")。
     *   避免负面算法词。
 
-### Phase 3: 结构模板 (Templates)
+### Phase 4: 结构模板 (Templates)
 根据内容类型应用特定结构（详见 `assets/structure_templates.md`）：
 
 *   **短文**：钩子 -> 痛点放大 -> 反转/干货 -> 情绪结尾+CTA
 *   **推文串(Thread)**：核弹钩子(1) -> 痛点放大(2-3) -> 核心干货(4-10) -> 高潮转折(11-12) -> 总结+CTA(End)
 *   **长文**：好奇标题 -> 故事开头 -> 框架拆解 -> 哲学结尾
 
-### Phase 4: 发布节奏建议 (Publishing Strategy)
+### Phase 5: 发布节奏建议 (Publishing Strategy)
 **在完成内容创作后，必须向用户提供发布建议。**
 
 引用 `assets/publishing_guide.md` 中的数据，执行以下步骤：
@@ -74,6 +90,6 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
 3.  **决策辅助**: 提醒用户如果昨天某条短文数据好，可直接扩写为 Thread。
 
 ## Assets
-- [Prompt Template](assets/prompt_template.md): 包含通用生成和Thread专用生成Prompt。
+- [Prompt Template](assets/prompt_template.md): 包含通用、Thread专用及技术博主2.0风格Prompt。
 - [Structure Templates](assets/structure_templates.md): 各类推文的详细结构模板，含Thread标准模板。
 - [Publishing Guide](assets/publishing_guide.md): 详细的发布节奏与时间策略指南。
