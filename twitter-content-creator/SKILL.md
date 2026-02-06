@@ -38,6 +38,12 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
     *   **适用**: 工具评测、代码分享、Paper 解读、Prompt 技巧。
     *   **Prompt**: 使用 `assets/prompt_template.md` 中的 "3. 技术博主 2.0 风格"。
 
+3.  **人文科技叙事风格 (The Narrative Thinker)**:
+    *   **特点**: 权威、亲和、叙事性强、关注社会/教育/思维。
+    *   **核心**: 触碰焦虑 + 提供出路 + 内部视角。
+    *   **适用**: 深度思考、社会现象评论、教育/职场建议、非技术人员指南。
+    *   **Prompt**: 使用 `assets/prompt_template.md` 中的 "4. 人文科技叙事风格"。
+
 ### Phase 3: 内容创作 SOP (Production)
 适用于短文和一般内容的 5 步流程：
 
@@ -47,6 +53,7 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
 4.  **人性化改写 (5-15min)**:
     *   *通用风格*: 加入口语、自嘲、极化观点。
     *   *技术风格*: 强化括号补充、检查专业术语英文、确保结论前置。
+    *   *叙事风格*: 增加"我与你"的对话感，强化故事细节。
 5.  **检查优化 (2min)**: 检查钩子、截图金句和CTA。
 
 ### Phase 3.1: 推文串 (Thread) 专属 SOP
@@ -90,6 +97,6 @@ description: 基于专业SOP协助用户创作高质量、高传播率的Twitter
 3.  **决策辅助**: 提醒用户如果昨天某条短文数据好，可直接扩写为 Thread。
 
 ## Assets
-- [Prompt Template](assets/prompt_template.md): 包含通用、Thread专用及技术博主2.0风格Prompt。
+- [Prompt Template](assets/prompt_template.md): 包含通用、Thread专用、技术博主2.0及人文科技叙事风格Prompt。
 - [Structure Templates](assets/structure_templates.md): 各类推文的详细结构模板，含Thread标准模板。
 - [Publishing Guide](assets/publishing_guide.md): 详细的发布节奏与时间策略指南。

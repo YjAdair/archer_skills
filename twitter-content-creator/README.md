@@ -18,6 +18,7 @@ Twitter Content Creator 是基于一套经过实战验证的 SOP（标准作业�
 ### 🎨 多样化风格
 - **通用爆款风格**：犀利、毒舌、情绪化（适合大众传播）
 - **技术博主 2.0 风格**：极致干货、高信息密度、结构化、中英混排（适合技术/AI圈）
+- **人文科技叙事风格**：权威、亲和、深度思考、关注社会与教育（适合长文/Thread）
 
 ### 🎯 爆款策略
 - **核弹级钩子**：30秒提炼最扎心/反常识的开头
@@ -42,7 +43,7 @@ Twitter Content Creator 是基于一套经过实战验证的 SOP（标准作业�
 
 ### 2. 选择策略
 - **类型**：短文 / Thread / 长文
-- **风格**：通用爆款 / 技术博主 2.0
+- **风格**：通用爆款 / 技术博主 2.0 / 人文科技叙事
 
 ### 3. 执行 SOP
 遵循 `SKILL.md` 中的流程：
@@ -52,7 +53,7 @@ Twitter Content Creator 是基于一套经过实战验证的 SOP（标准作业�
 ## 资源文件
 
 - **SKILL.md**: 完整的操作手册和 SOP 详情
-- **assets/prompt_template.md**: 核心 AI 提示词（通用 + Thread专用 + 技术博主2.0）
+- **assets/prompt_template.md**: 核心 AI 提示词（通用 + Thread专用 + 技术博主2.0 + 人文科技叙事）
 - **assets/structure_templates.md**: 各类推文的结构公式（含Thread标准模板）
 - **assets/publishing_guide.md**: 发布节奏与策略指南
 
