@@ -1,0 +1,4 @@
+twitter-article-scraper/scripts/articles/*
+twitter-article-scraper/scripts/chrome_profile/*
+.trae/*
+temp/*
