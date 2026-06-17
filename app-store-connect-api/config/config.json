@@ -1,0 +1,20 @@
+{
+  "issuerId": "",
+  "keyId": "",
+  "privateKeyPath": "",
+  "appId": "",
+  "bundleId": "",
+  "appInfoId": "",
+  "ageRatingDeclarationId": "",
+  "appStoreVersionId": "",
+  "localizations": {
+    "en-US": {
+      "appInfoLocalizationId": "",
+      "appStoreVersionLocalizationId": ""
+    },
+    "zh-Hans": {
+      "appInfoLocalizationId": "",
+      "appStoreVersionLocalizationId": ""
+    }
+  }
+}

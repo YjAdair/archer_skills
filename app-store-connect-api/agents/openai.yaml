@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Store Connect API"
+  short_description: "ASC API 配置检测与安全操作流程"
+  default_prompt: "使用 $app-store-connect-api 检查 App Store Connect API 配置，并安全更新 App 元数据。"
