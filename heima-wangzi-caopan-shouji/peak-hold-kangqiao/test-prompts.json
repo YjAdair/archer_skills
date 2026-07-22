@@ -1,0 +1,48 @@
+{
+  "skill": "peak-hold-kangqiao",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "突破左峰后回踩，过峰保顶是否成功？",
+      "expected_behavior": "应调用 peak-hold-kangqiao。",
+      "notes": "正向触发: 过峰保顶与康桥接力"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "过高量实顶后价升量缩，算燕归来康桥吗？",
+      "expected_behavior": "应调用 peak-hold-kangqiao。",
+      "notes": "正向触发: 过峰保顶与康桥接力"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Check this breakout hold / kangqiao bridge setup.",
+      "expected_behavior": "应调用 peak-hold-kangqiao。",
+      "notes": "正向触发: 过峰保顶与康桥接力"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "底部低量群是不是凹底淘金？",
+      "expected_behavior": "应触发 concave-bottom-notch-gold。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "哪个板块是真强者？",
+      "expected_behavior": "应触发 sector-rotation-strong-following。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "还没突破左峰，只是低位横盘。",
+      "expected_behavior": "边界场景：不应调用，可能转凹底/凹口。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

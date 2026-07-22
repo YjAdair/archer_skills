@@ -1,0 +1,48 @@
+{
+  "skill": "heima-risk-discipline",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我模拟盘刚抓到两个涨停，朋友想出钱让我帮他操作，可以接吗？",
+      "expected_behavior": "应调用 heima-risk-discipline，先检查代客理财红线并建议降级为训练/复盘。",
+      "notes": "正向触发: 四不得四不要风险纪律"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我最近连续亏损，想加杠杆扳回来，按黑马王子的方法能不能干？",
+      "expected_behavior": "应调用 heima-risk-discipline，识别借钱/杠杆/翻本心态红线。",
+      "notes": "正向触发: 四不得四不要风险纪律"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Can I charge people for stock tips after learning this method?",
+      "expected_behavior": "应调用 heima-risk-discipline，识别 paid tips / 荐股越界。",
+      "notes": "正向触发: 四不得四不要风险纪律"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这根大阴线是不是长阴短柱？",
+      "expected_behavior": "应触发 long-yin-short-volume，不应调用风险纪律。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我解释一下量柱是什么意思。",
+      "expected_behavior": "术语查询，应看 GLOSSARY 或 volume-line-balance-reading。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我想开始每天做纸面预报训练，但不实盘。",
+      "expected_behavior": "边界场景：可轻量调用风险纪律确认不实盘，然后转 time-window-reading。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

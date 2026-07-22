@@ -1,0 +1,48 @@
+{
+  "skill": "two-dragon-positioning",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "横线和斜线明天交叉，二龙定位是不是变盘？",
+      "expected_behavior": "应调用 two-dragon-positioning。",
+      "notes": "正向触发: 平斜二龙定位"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "叉上看涨叉下看跌，预案应该怎么写？",
+      "expected_behavior": "应调用 two-dragon-positioning。",
+      "notes": "正向触发: 平斜二龙定位"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Analyze this flat-oblique two-dragon crossover node.",
+      "expected_behavior": "应调用 two-dragon-positioning。",
+      "notes": "正向触发: 平斜二龙定位"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这条线有没有生根？",
+      "expected_behavior": "应触发 key-line-anchoring。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "过左峰后回踩算康桥吗？",
+      "expected_behavior": "应触发 peak-hold-kangqiao。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只有一句二龙交叉，没有两条线的来源。",
+      "expected_behavior": "边界场景：不应精确判断，先要求线位证据。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

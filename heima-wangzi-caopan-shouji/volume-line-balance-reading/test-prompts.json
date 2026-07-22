@@ -1,0 +1,48 @@
+{
+  "skill": "volume-line-balance-reading",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "不看消息，只按量柱量线，这段走势该怎么读？",
+      "expected_behavior": "应调用 volume-line-balance-reading，拆量柱/价柱/量线/量波。",
+      "notes": "正向触发: 量柱量线动态平衡读盘框架"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这根阳线很漂亮，但量价结构是不是假强？",
+      "expected_behavior": "应调用 volume-line-balance-reading，并可能转 true-false-yin-yang。",
+      "notes": "正向触发: 量柱量线动态平衡读盘框架"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Do a volume-price dynamic balance reading for this setup.",
+      "expected_behavior": "应调用 volume-line-balance-reading。",
+      "notes": "正向触发: 量柱量线动态平衡读盘框架"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "3121 二一位怎么计算？",
+      "expected_behavior": "应触发 three-one-two-one-rhythm。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我查公司财报收入。",
+      "expected_behavior": "基本面信息查询，不应调用量学读盘。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "这只股票有政策利好，要不要关注？",
+      "expected_behavior": "边界场景：若只问政策不调用；若要求回到盘面证据，可调用。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

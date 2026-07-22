@@ -1,0 +1,48 @@
+{
+  "skill": "true-false-yin-yang",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "今天低开高走收阳，但会不会是假阳真阴？",
+      "expected_behavior": "应调用 true-false-yin-yang。",
+      "notes": "正向触发: 真假阴阳辨别与右确认"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这根阴线是不是假阴真阳？",
+      "expected_behavior": "应调用 true-false-yin-yang。",
+      "notes": "正向触发: 真假阴阳辨别与右确认"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Check whether this candle is fake yang real yin.",
+      "expected_behavior": "应调用 true-false-yin-yang。",
+      "notes": "正向触发: 真假阴阳辨别与右确认"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "长阴短柱是不是假跌？",
+      "expected_behavior": "应触发 long-yin-short-volume。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "顶部3121怎么分级减仓？",
+      "expected_behavior": "应触发 three-one-two-one-rhythm。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只告诉我今天收阳，没有量价和线位。",
+      "expected_behavior": "边界场景：不应直接判断，只能要求上下文。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

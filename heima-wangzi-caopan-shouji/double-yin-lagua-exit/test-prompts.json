@@ -1,0 +1,48 @@
+{
+  "skill": "double-yin-lagua-exit",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "连续两根阴线跌破前阴收盘价，是不是双阴出货？",
+      "expected_behavior": "应调用 double-yin-lagua-exit。",
+      "notes": "正向触发: 双阴/大阴/拉拐出货防守"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "跳空阴后拉升拐头，拉拐怎么处理？",
+      "expected_behavior": "应调用 double-yin-lagua-exit。",
+      "notes": "正向触发: 双阴/大阴/拉拐出货防守"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "The stock failed at the upper line; should we switch to exit defense?",
+      "expected_behavior": "应调用 double-yin-lagua-exit。",
+      "notes": "正向触发: 双阴/大阴/拉拐出货防守"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我还没交易，朋友让我代操。",
+      "expected_behavior": "应触发 heima-risk-discipline。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这次亏损应该怎么复盘？",
+      "expected_behavior": "应触发 failure-case-review。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只有一点回落，没有破线也没有双阴。",
+      "expected_behavior": "边界场景：不应触发出货流程，只观察。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

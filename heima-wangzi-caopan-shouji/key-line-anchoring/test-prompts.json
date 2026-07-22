@@ -1,0 +1,48 @@
+{
+  "skill": "key-line-anchoring",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这条精准线取点是不是自然，还是事后贴出来的？",
+      "expected_behavior": "应调用 key-line-anchoring，检查线位生根和自然性。",
+      "notes": "正向触发: 关键线生根与攻防"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "平衡线破了之后，原来的预案是不是失效？",
+      "expected_behavior": "应调用 key-line-anchoring，检查破线意义。",
+      "notes": "正向触发: 关键线生根与攻防"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Validate whether this balance line has a real anchor point.",
+      "expected_behavior": "应调用 key-line-anchoring。",
+      "notes": "正向触发: 关键线生根与攻防"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天三线怎么设？",
+      "expected_behavior": "应触发 premarket-three-lines。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这是不是假阳真阴？",
+      "expected_behavior": "应触发 true-false-yin-yang。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只有 OCR 文本，没有图，能不能精确画线？",
+      "expected_behavior": "边界场景：可调用并输出不能精确画线、需补图表。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

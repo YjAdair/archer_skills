@@ -1,0 +1,48 @@
+{
+  "skill": "premarket-three-lines",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "明天盘前三线应该怎么设，上线中线下线分别怎么用？",
+      "expected_behavior": "应调用 premarket-three-lines。",
+      "notes": "正向触发: 盘前三线预案与失效条件"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "如果开盘直接跌破下线，原来的反弹预案还成立吗？",
+      "expected_behavior": "应调用 premarket-three-lines，输出失效条件。",
+      "notes": "正向触发: 盘前三线预案与失效条件"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Build a three-line premarket plan with invalidation rules.",
+      "expected_behavior": "应调用 premarket-three-lines。",
+      "notes": "正向触发: 盘前三线预案与失效条件"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这条线有没有生根？",
+      "expected_behavior": "应触发 key-line-anchoring。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "双阴出货怎么处理？",
+      "expected_behavior": "应触发 double-yin-lagua-exit。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我没有任何关键线，只想猜明天涨跌。",
+      "expected_behavior": "边界场景：不应调用，或先要求关键线证据。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

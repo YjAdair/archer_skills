@@ -1,0 +1,48 @@
+{
+  "skill": "trump-column-ranking",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这个软件标的黄金柱靠谱吗？",
+      "expected_behavior": "应调用 trump-column-ranking，检查授衔质量。",
+      "notes": "正向触发: 黄金柱/将军柱/王牌授衔"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "哪根量柱才是基柱，能不能当王牌？",
+      "expected_behavior": "应调用 trump-column-ranking。",
+      "notes": "正向触发: 黄金柱/将军柱/王牌授衔"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Rank these golden/general/trump columns.",
+      "expected_behavior": "应调用 trump-column-ranking。",
+      "notes": "正向触发: 黄金柱/将军柱/王牌授衔"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这是不是凹底淘金机会？",
+      "expected_behavior": "应触发 concave-bottom-notch-gold。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "平斜交叉处怎么判断？",
+      "expected_behavior": "应触发 two-dragon-positioning。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只有文字说有黄金柱，没有图。",
+      "expected_behavior": "边界场景：可调用但只能输出需图表验证。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "skill": "long-yin-short-volume",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "大阴线但成交量很小，这是长阴短柱假跌吗？",
+      "expected_behavior": "应调用 long-yin-short-volume。",
+      "notes": "正向触发: 长阴短柱与极阴次阳"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "极阴之后次阳过半阴了吗，能不能确认？",
+      "expected_behavior": "应调用 long-yin-short-volume。",
+      "notes": "正向触发: 长阴短柱与极阴次阳"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Analyze this shrink-volume drop as long-yin-short-volume.",
+      "expected_behavior": "应调用 long-yin-short-volume。",
+      "notes": "正向触发: 长阴短柱与极阴次阳"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这是回马枪还是普通回调？",
+      "expected_behavior": "应触发 huimaqiang-three-step。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这根阳线是假阳真阴吗？",
+      "expected_behavior": "应触发 true-false-yin-yang。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只有跌幅，没有成交量。",
+      "expected_behavior": "边界场景：不应判断长阴短柱，需量柱数据。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

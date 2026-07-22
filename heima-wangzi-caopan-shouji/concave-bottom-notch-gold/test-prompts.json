@@ -1,0 +1,48 @@
+{
+  "skill": "concave-bottom-notch-gold",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这只超跌股有低量群和卧底王牌，算凹底淘金吗？",
+      "expected_behavior": "应调用 concave-bottom-notch-gold。",
+      "notes": "正向触发: 凹底/凹口淘金组合筛选"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "凹口突破后能不能接力，需要哪些证据？",
+      "expected_behavior": "应调用 concave-bottom-notch-gold。",
+      "notes": "正向触发: 凹底/凹口淘金组合筛选"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Screen this as an aodi/aokou bottom-notch gold setup.",
+      "expected_behavior": "应调用 concave-bottom-notch-gold。",
+      "notes": "正向触发: 凹底/凹口淘金组合筛选"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "突破左峰后能不能保顶？",
+      "expected_behavior": "应触发 peak-hold-kangqiao。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "哪根柱能授衔为王牌？",
+      "expected_behavior": "应触发 trump-column-ranking。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "只是跌得低，没有底和线。",
+      "expected_behavior": "边界场景：不应调用或应输出淘汰。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

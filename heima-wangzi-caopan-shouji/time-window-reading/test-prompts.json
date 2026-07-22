@@ -1,0 +1,48 @@
+{
+  "skill": "time-window-reading",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这篇 2017 年收评我想当训练材料，先别告诉我后来怎么走。",
+      "expected_behavior": "应调用 time-window-reading，冻结时间窗口并先写自我预判。",
+      "notes": "正向触发: 时间窗口三步阅读法"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "帮我按时间窗口复盘一篇盘前预报。",
+      "expected_behavior": "应调用 time-window-reading，执行预测-对照-校正。",
+      "notes": "正向触发: 时间窗口三步阅读法"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "I want a historical forecast drill, not a summary.",
+      "expected_behavior": "应调用 time-window-reading。",
+      "notes": "正向触发: 时间窗口三步阅读法"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这条平衡线是不是人工雕饰？",
+      "expected_behavior": "应触发 key-line-anchoring。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我朋友让我代操资金，可以接吗？",
+      "expected_behavior": "应触发 heima-risk-discipline。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "帮我总结这本书讲了什么。",
+      "expected_behavior": "边界场景：普通摘要不应调用，除非用户明确要训练式阅读。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

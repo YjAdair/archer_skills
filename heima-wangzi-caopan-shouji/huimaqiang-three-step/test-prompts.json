@@ -1,0 +1,48 @@
+{
+  "skill": "huimaqiang-three-step",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "连续两天下杀第三天拉起，这是回马枪吗？",
+      "expected_behavior": "应调用 huimaqiang-three-step。",
+      "notes": "正向触发: 回马枪三步破解"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "回踩到哪里才算正常回马，不是趋势坏了？",
+      "expected_behavior": "应调用 huimaqiang-three-step。",
+      "notes": "正向触发: 回马枪三步破解"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Is this a huimaqiang pullback attack setup?",
+      "expected_behavior": "应调用 huimaqiang-three-step。",
+      "notes": "正向触发: 回马枪三步破解"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "超跌底部横盘是不是凹底淘金？",
+      "expected_behavior": "应触发 concave-bottom-notch-gold。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "跳空阴拉拐怎么出？",
+      "expected_behavior": "应触发 double-yin-lagua-exit。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "没有原趋势，只是跌了很多想抄底。",
+      "expected_behavior": "边界场景：不应调用回马枪，可能转凹底或风险纪律。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}

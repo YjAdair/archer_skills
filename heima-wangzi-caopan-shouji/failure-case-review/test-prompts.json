@@ -1,0 +1,48 @@
+{
+  "skill": "failure-case-review",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这次我买入后亏了 15%，帮我按黑马王子的方法复盘错在哪里。",
+      "expected_behavior": "应调用 failure-case-review。",
+      "notes": "正向触发: 失败案例三步复盘"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我卖飞了一个涨停，怎么定位当时复盘？",
+      "expected_behavior": "应调用 failure-case-review。",
+      "notes": "正向触发: 失败案例三步复盘"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Do a decision postmortem for this failed trade.",
+      "expected_behavior": "应调用 failure-case-review。",
+      "notes": "正向触发: 失败案例三步复盘"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天三线怎么设？",
+      "expected_behavior": "应触发 premarket-three-lines。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这根假阳真阴确认了吗？",
+      "expected_behavior": "应触发 true-false-yin-yang。",
+      "notes": "诱饵: 应触发同书其他 skill 或不应触发本 skill"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只是心情不好，不想提供交易事实。",
+      "expected_behavior": "边界场景：不能严谨复盘，应要求事实材料。",
+      "notes": "边界模糊场景"
+    }
+  ]
+}
